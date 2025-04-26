@@ -1,0 +1,23 @@
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #231F42;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.home-container h1 {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 32px;
+    color: #F56B9A;
+}
+
+.home-container p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
