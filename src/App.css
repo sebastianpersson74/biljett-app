@@ -1,42 +1,66 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Inkludera Sansita One */
+@font-face {
+  font-family: 'Sansita One';
+  src: url('/fonts/SansitaOne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Grundläggande reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sansita One', sans-serif;
+  background-color: #231F42;
+  height: 100%;
+}
+
+/* Innehållet på sidan */
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px; /* Lämna om navbaren behöver utrymme nedtill */
+}
+
+/* Navigationsfält längst ner */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F56B9A;
+  color: #231F42;
   text-align: center;
+  padding: 10px 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar li {
+  display: inline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.card {
-  padding: 2em;
+.navbar a:hover {
+  color:#231F42;
 }
 
-.read-the-docs {
-  color: #888;
+.navbar a:active {
+  color:#231F42;
 }
