@@ -1,26 +1,32 @@
 // src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Events from './pages/Events/Events';
 import Tickets from './pages/Tickets/Tickets';
+import Checkout from './pages/Checkout/Checkout';
+import MyTickets from './pages/MyTickets/MyTickets';
+import './App.css';
 
 const App = () => {
   return (
     <Router>
-      <Swiper
-        modules={[Pagination]}
-        pagination={{ clickable: true }}
-        spaceBetween={50}
-        slidesPerView={1}
-      >
-        <SwiperSlide><Home /></SwiperSlide>
-        <SwiperSlide><Events /></SwiperSlide>
-        <SwiperSlide><Tickets /></SwiperSlide>
-      </Swiper>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/tickets/:eventId" element={<Tickets />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/mytickets" element={<MyTickets />} />
+        </Routes>
+      </div>
+
+      <nav className="navbar">
+        <ul>
+          <li><Link to ="/">Home</Link></li>
+          <li><Link to="/events">Events</Link></li>
+          <li><Link to="/mytickets">Mina Biljetter</Link></li>
+        </ul>
+      </nav>
     </Router>
   );
 }

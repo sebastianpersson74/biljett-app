@@ -1,0 +1,141 @@
+.ticket-container {
+    background-color: #231F42;
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  .ticket-header {
+    font-size: 32px;
+    color: #F56B9A;
+    text-align: center;
+    font-family: 'Sansita One';
+
+  }
+  
+  .ticket-subheader {
+    font-size: 19px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-family: 'Fira Sans';
+  }
+  
+  .ticket-name {
+    font-size: 35px;
+    color: #F56B9A;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Sansita One';
+  }
+  
+  .ticket-datetime {
+    font-size: 19px;
+    color: #37AEAB;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .ticket-location {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  
+  /* --- Uppdaterad biljettkontroll --- */
+  .ticket-controls {
+    margin-top: 30px;
+    border: 2px solid #F56B9A;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .total-price {
+    flex: 1;
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px #F56B9A;
+    text-align: center;
+    padding: 20px 0;
+    background-color: transparent;
+    border-bottom: 1px solid #F56B9A;
+    font-weight: 700;
+  }
+  
+  .ticket-amount-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    height: 70px;
+  }
+  
+  .amount-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .amount-button:first-child {
+    border-right: 1px solid #F56B9A;
+  }
+  
+  .amount-button:last-child {
+    border-left: 1px solid #F56B9A;
+  }
+  
+  .ticket-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+  }
+  
+  .add-to-cart-button {
+    background-color: #37AEAB;
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Fira Sans';
+    font-weight: 600;
+  }
+  
+  .return-to-event-button {
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    border: 1px solid #F56B9A;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Fira Sans';
+    font-weight: 600;
+  }

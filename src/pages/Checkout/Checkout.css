@@ -1,0 +1,156 @@
+.checkout-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #231F42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .checkout-title {
+    font-size: 32px;
+    color: #F56B9A;
+    text-align: center;
+    margin-bottom: 25px;
+    justify-content: flex-start;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .cart-item {
+    border-radius: 3px;
+    border: 2px solid #F56B9A;
+    width: 100%;
+  }
+  
+  .cart-item-info {
+    background-color: transparent;
+  }
+  
+  .cart-item-header h2 {
+    font-size: 24px;
+    color: #F56B9A;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .cart-item-header p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    color: #37AEAB;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+  
+  /* Ticket controls: anpassad för knappens bredd */
+  .ticket-controls {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid #F56B9A;
+    width: 100%;
+  }
+  
+  .ticket-amount-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    height: 50px;
+  }
+  
+  .amount-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .amount-button:first-child {
+    border-right: 1px solid #F56B9A;
+  }
+  
+  .amount-button:last-child {
+    border-left: 1px solid #F56B9A;
+  }
+  
+  .ticket-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    font-family: 'Fira Sans';
+  }
+  
+  /* Checkout Summary */
+  .checkout-summary {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Matchar .cart-items */
+  }
+  
+  .checkout-total-text {
+    font-size: 16px;
+    font-style: italic;
+    font-family: 'Fira Sans';
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+  }
+  
+  .checkout-total-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px #F56B9A;
+    margin-bottom: 20px;
+    font-family: 'Fira Sans';
+  }
+  
+  /* Knappen: samma bredd som ticket-controls */
+  .checkout-submit-button {
+    background-color: #37AEAB;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 30px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    display:block;
+  }
+  
+  /* RESPONSIVITET mellan 375px och 500px */
+  @media screen and (max-width: 500px) {
+    .checkout-title {
+      font-size: 32px;
+    }
+  
+    .cart-item-header h2 {
+        margin-top: 15px;
+    }
+    .checkout-submit-button,
+    .ticket-controls {
+      width: 100%;
+    }
+  }
+  

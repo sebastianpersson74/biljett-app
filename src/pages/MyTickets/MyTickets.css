@@ -1,0 +1,214 @@
+.my-tickets-container {
+    padding: 20px 10px;
+    background: linear-gradient(to bottom, #F56B9A, #231F42);
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  /* Själva biljetten */
+  .ticket {
+    background-color: white;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Ticket sections */
+  .ticket-section {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    border-bottom: 2px dotted rgba(0, 0, 0, 0.4);
+    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  /* WHAT */
+  .what-section h2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: black;
+    opacity: 0.7;
+  }
+  .what-section h3 {
+    font-size: 24px;
+    color: #F56B9A;
+    margin: 0;
+  }
+  
+  /* WHERE */
+  .where-section {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  .where-section h2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+  .where-section p {
+    font-size: 16px;
+    color: black;
+    opacity: 0.7;
+    margin: 0;
+  }
+  
+  /* WHEN / FROM / TO */
+  .when-from-to-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.06);
+    justify-content: space-between;
+  }
+  .when-column,
+  .from-column,
+  .to-column {
+    flex: 1;
+    border-right: 1px dotted rgba(0, 0, 0, 0.4);
+    padding: 0.5rem;
+  }
+  .to-column {
+    border-right: none;
+  }
+  .when-section h2,
+  .from-section h2,
+  .to-section h2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: black;
+    opacity: 0.7;
+  }
+  .when-column p,
+  .from-column p,
+  .to-column p {
+    font-size: 16px;
+    color: black;
+    opacity: 0.6;
+    margin: 0;
+  }
+  
+  /* INFO */
+  .info-section {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+  .info-section h2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: black;
+    opacity: 0.7;
+  }
+  .info-section p {
+    font-size: 16px;
+    color: black;
+    opacity: 0.8;
+    margin: 0;
+  }
+  
+  /* BARCODE */
+  .barcode-section {
+    background-color: rgba(0, 0, 0, 0.12);
+    text-align: center;
+  }
+  .barcode {
+    margin: 1rem auto;
+    height: 80px;
+    width: 60%;
+    background: repeating-linear-gradient(
+      90deg,
+      black,
+      black 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+  
+  /* CODE */
+  .code-section {
+    background-color: rgba(0, 0, 0, 0.12);
+    text-align: center;
+  }
+  .code-section p {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 5px;
+  }
+  
+/* Confetti */
+.confetti-animation {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    animation: fadeOut 1.5s ease-in forwards;
+    animation-delay: 2.5s;
+    opacity: 1;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+  
+  
+  /* Swiper */
+  .ticket-swiper .swiper-button-prev,
+  .ticket-swiper .swiper-button-next {
+    color: #F56B9A;
+  }
+  .ticket-swiper .swiper-pagination-bullet {
+    background-color: #231F42;
+    opacity: 1;
+  }
+  .ticket-swiper .swiper-pagination-bullet-active {
+    background-color: #F56B9A;
+  }
+
+  .ticket-swiper,
+  .ticket-swiper .swiper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* ----------------------------- */
+  /* RESPONSIVITET FÖR < 500 PX */
+  /* ----------------------------- */
+  @media (max-width: 500px) {
+
+  
+    .barcode {
+      height: 60px;
+      width: 80%;
+    }
+  
+    .confetti-animation {
+      top: 15%;
+      transform: translateX(-50%);
+    }
+
+    .ticket-swiper,
+    .ticket-swiper .swiper {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+      .ticket {
+        max-width: none;
+      }
+  }
+  
